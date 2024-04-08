@@ -1,14 +1,10 @@
-import { Provider } from 'react-redux'
-import Counter from './components/Counter.tsx'
-import store from './redux/store.ts'
+import LoginForm from './components/LoginForm.tsx'
 
 const App = () => {
   return (
-    <Provider store={store}>
-     
-        <Counter />
-    
-    </Provider>
+    <div>
+      <LoginForm />
+    </div>
   )
 }
 
