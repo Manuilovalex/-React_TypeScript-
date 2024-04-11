@@ -1,5 +1,6 @@
+import { Button, TextField, Container, Box } from '@mui/material'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import { ErrorMessage, Field, Form, Formik } from 'formik'
 
 const LoginForm = () => {
   const validationSchema = Yup.object({
@@ -21,30 +22,59 @@ const LoginForm = () => {
   }
 
   return (
-    <Formik
-      initialValues={{ email: '', login: '', password: '' }}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      <Form>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <Field type="email" id="email" name="email" />
-          <ErrorMessage name="email" className="error" component="div" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="login">Login</label>
-          <Field type="text" id="login" name="login" />
-          <ErrorMessage name="login" className="error" component="div" />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <Field type="password" id="password" name="password" />
-          <ErrorMessage name="password" className="error" component="div" />
-        </div>
-        <button type="submit">Submit</button>
-      </Form>
-    </Formik>
+    <Container maxWidth="sm">
+      <Box textAlign="center" margin={5}>
+        <h2>Registration</h2>
+      </Box>
+      <Formik
+        initialValues={{ email: '', login: '', password: '' }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <div>
+            <Field
+              as={TextField}
+              label="Email"
+              variant="outlined"
+              fullWidth
+              id="email"
+              name="email"
+              sx={{ marginBottom: 2 }}
+              helperText={<ErrorMessage name="email" component="div" className="error" />}
+            />
+          </div>
+          <div>
+            <Field
+              as={TextField}
+              label="Login"
+              variant="outlined"
+              fullWidth
+              id="login"
+              name="login"
+              sx={{ marginBottom: 2 }}
+              helperText={<ErrorMessage name="login" component="div" className="error" />}
+            />
+          </div>
+          <div>
+            <Field
+              as={TextField}
+              label="Password"
+              variant="outlined"
+              fullWidth
+              id="password"
+              name="password"
+              type="password"
+              sx={{ marginBottom: 2 }}
+              helperText={<ErrorMessage name="password" component="div" className="error" />}
+            />
+          </div>
+          <Button type="submit" variant="contained" color="primary" fullWidth>
+            Submit
+          </Button>
+        </Form>
+      </Formik>
+    </Container>
   )
 }
 
