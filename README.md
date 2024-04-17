@@ -1,3 +1,3 @@
-# React + TypeScript + Vite + Material UI
+# React + TypeScript + Vite + Memo
 
 
