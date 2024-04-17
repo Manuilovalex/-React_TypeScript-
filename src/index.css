@@ -4,14 +4,23 @@
   padding: 0;
 }
 
-h2, p {
+h2 {
   text-align: center;
-margin: 25px;
+  margin: 25px;
+  padding: 10px;
+  border-top: solid 1px #413f3f;
+}
+p {
+  text-align: center;
+  margin: 25px;
+  font-size: large;
 }
 
 body {
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   background-color: #e6d5d5;
+  text-align: center;
 }
 
 form {
@@ -39,7 +48,7 @@ input {
 }
 
 button {
-  margin-top: 10px;
+  margin: 10px;
   padding: 10px;
   border: none;
   border-radius: 6px;
