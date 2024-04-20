@@ -52,16 +52,22 @@ input {
 
 button {
   margin: 10px;
-  padding: 10px;
+  padding: 10px 40px;
   border: none;
   border-radius: 6px;
   background-color: #4caf50;
   color: white;
   cursor: pointer;
-}
 
-button:hover {
-  background-color: #45a049;
+  &:hover {
+    --opacity: 0.7;
+    background-color: #63c566;
+
+    &:active {
+      opacity: 0.9;
+      background-color: #a2cca4;
+    }
+  }
 }
 
 .modal {
