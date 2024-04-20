@@ -1,3 +1,3 @@
-# React + TypeScript + Vite + Memo
+# React + TypeScript + Vite + React Icons, React Toastify, React Idle Timer
 
 
